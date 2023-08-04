@@ -1,1 +1,1 @@
-This repo has the code I used to learn TypeScript.
+This repo has the code that I used to learn TypeScript.
