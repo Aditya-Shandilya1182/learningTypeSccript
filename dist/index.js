@@ -15,4 +15,19 @@ function calculateTax(income) {
     }
     return income * 1.3;
 }
+let employee = { id: 1, name: 'Arya' };
+function kgToLbs(weight) {
+    if (typeof weight === 'number') {
+        return weight * 2.2;
+    }
+    else {
+        return parseInt(weight) * 2.2;
+    }
+}
+kgToLbs(10);
+kgToLbs('10');
+let textBox = {
+    drag: () => { },
+    resize: () => { }
+};
 //# sourceMappingURL=index.js.map

@@ -24,3 +24,42 @@ function calculateTax(income: number): number{
     }
     return income * 1.3;
 }
+//? makes properties optional
+
+//objects
+type Employee = {
+    readonly id : number,
+    name : string,
+    hobies ? : string
+}
+
+let employee: Employee  = {id : 1, name : 'Arya'};
+
+//Union Type
+function kgToLbs(weight: number | string): number {
+    //Narrowing
+    if(typeof weight === 'number'){
+        return weight * 2.2;
+    } else {
+        return parseInt(weight) * 2.2;
+    }
+}
+
+kgToLbs(10);
+kgToLbs('10');
+
+//Intersection Types
+type Draggable = {
+    drag: () => void
+}
+
+type Resizeable = {
+    resize: () => void
+}
+
+type UIWidget = Draggable & Resizeable;
+
+let textBox: UIWidget ={
+    drag: () => {},
+    resize: () => {}
+}
